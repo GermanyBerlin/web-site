@@ -1,0 +1,12 @@
+.header{
+  grid-area: header;
+  background-color: rgb(54, 54, 255);
+}
+
+.header img{
+   width: 45px;
+   height: 45px;
+   margin-top: 5px;
+   margin-left: 5px;
+   background-color:blanchedalmond;
+}

@@ -1,3 +1,5 @@
+import '../css/Content.css'
+
 const Content = () => {
   return(
     <div className="content">
