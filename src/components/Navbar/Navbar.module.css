@@ -1,0 +1,16 @@
+.navbar{
+  grid-area: navbar;  
+  background-color: #abbfbd;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.item{
+  color:black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.item.active{
+  color: #615853;
+}
