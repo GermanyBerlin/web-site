@@ -6,11 +6,23 @@
 }
 
 .item{
-  color:black;
+  width: 100%;
   margin-top: 5px;
   margin-left: 5px;
 }
 
+.item a{
+  color:black;
+  text-decoration: none;
+}
+
+.item a:hover{
+  background: #a2b4b2;
+  color: #615853; 
+  border-radius: 5px;
+}
+
 .item.active{
-  color: #615853;
+  color: black;
+  width: 100%;
 }

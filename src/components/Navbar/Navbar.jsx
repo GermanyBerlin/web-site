@@ -1,22 +1,22 @@
 import s from './Navbar.module.css';
 
 const Navbar = () => {
-  return(
+  return (
     <div className={s.navbar}>
       <div className={`${s.item} ${s.active}`}>
-        <a>Profile</a>
+        <a href="/content">Моя страница</a>
       </div>
       <div className={`${s.item} ${s.active}`}>
-        <a>Messages</a>
+        <a href="/dialogs">Сообщения</a>
       </div>
       <div className={`${s.item} ${s.active}`}>
-        <a>News</a>
+        <a href="/news">Новости</a>
       </div>
       <div className={`${s.item} ${s.active}`}>
-        <a>Music</a>
+        <a href="/music">Музыка</a>
       </div>
       <div className={`${s.item} ${s.active}`}>
-        <a>Settings</a>
+        <a href="settings">Настройки</a>
       </div>
     </div>
   );
