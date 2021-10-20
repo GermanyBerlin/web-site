@@ -4,20 +4,20 @@ import s from './Navbar.module.css';
 const Navbar = () => {
   return (
     <nav className = {s.navbar}>
-      <div className = {`${s.item} ${s.active}`}>
-        <NavLink to = "/content">Моя страница</NavLink>
+      <div className = {s.item}>
+        <NavLink to = "/content" activeClassName={s.active}>Моя страница</NavLink>
       </div>
-      <div className={`${s.item} ${s.active}`}>
-        <NavLink to = "/dialogs">Сообщения</NavLink>
+      <div className = {s.item}>
+        <NavLink to = "/dialogs" activeClassName={s.active}>Сообщения</NavLink>
       </div>
-      <div className = {`${s.item} ${s.active}`}>
-        <NavLink to = "/news">Новости</NavLink>
+      <div className = {s.item}>
+        <NavLink to = "/news" activeClassName={s.active}>Новости</NavLink>
       </div>
-      <div className={`${s.item} ${s.active}`}>
-        <NavLink to = "/music">Музыка</NavLink>
+      <div className = {s.item}>
+        <NavLink to = "/music" activeClassName={s.active}>Музыка</NavLink>
       </div>
-      <div className = {`${s.item} ${s.active}`}>
-        <NavLink to = "settings">Настройки</NavLink>
+      <div className = {s.item}>
+        <NavLink to = "settings" activeClassName={s.active}>Настройки</NavLink>
       </div>
     </nav>
   );
