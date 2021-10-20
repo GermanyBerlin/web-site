@@ -1,3 +1,7 @@
-.imgContentFoto img{
+img{
   width: 100px;
+}
+
+.description{
+  padding: 5px;
 }

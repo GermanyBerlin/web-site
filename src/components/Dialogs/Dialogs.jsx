@@ -3,32 +3,44 @@ import s from './Dialogs.module.css';
 
 const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;
-  return(
+  return (
     <div className={s.dialog}>
-      <NavLink to = {path} activeClassName={s.active}>{props.name}</NavLink> 
+      <NavLink to={path} activeClassName={s.active}>{props.name}</NavLink>
     </div>
   )
 }
 
 const Message = props => {
-  return(
-    <div className = {s.message}>{props.message}</div>
+  return (
+    <div className={s.message}>{props.message}</div>
   )
 }
 
 const Dialogs = (props) => {
-  return (
-    <div className = {s.dialogs}>
-      <div className = {s.dialogsItem}>
-        <DialogItem name = 'Alex' id = '1'/>
-        <DialogItem name = 'Freank' id = '2'/>
-        <DialogItem name = 'Missa' id = '3'/>
 
+  let dialogs = [
+    { id: '1', name: 'Alex' },
+    { id: '2', name: 'Freank' },
+    { id: '3', name: 'Missa' }
+  ]
+  
+  let messages = [
+    { id: '1', message: 'Hello 1' },
+    { id: '2', message: 'Hello 2' },
+    { id: '3', message: 'Hello 3' }
+  ]
+
+  let dialogsElements = dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
+
+  let messagesElements = messages.map(message => <Message message={message.message} />)
+
+  return (
+    <div className={s.dialogs}>
+      <div className={s.dialogsItem}>
+        {dialogsElements}
       </div>
-      <div className = {s.messages}>
-        <Message message = 'Hello 1'/>
-        <Message message = 'Hello 2'/>
-        <Message message = 'Hello 3'/>
+      <div className={s.messages}>
+        {messagesElements}
       </div>
       <div>
 
