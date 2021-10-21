@@ -11,22 +11,20 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 
-const App = () => {
+const App = (props) => {
   return (
-    <BrowserRouter>
       <div className='wrapper'>
         <Header />
         <Navbar />
         <div className='wrapper-content'>
-          <Route path = "/dialogs" component = {Dialogs} />
-          <Route path = "/content" component = {Content} />
-          <Route path = "/news" component = {News} />
-          <Route path = "/music" component = {Music} />
-          <Route path = "/settings" component = {Settings} />
+          <Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage} />} />
+          <Route path="/content" render={() => <Content state={props.state.contentPage}/>} />
+          <Route path="/news" render={() => <News />} />
+          <Route path="/music" render={() => <Music />} />
+          <Route path="/settings" render={() => <Settings />} />
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
   );
 }
 

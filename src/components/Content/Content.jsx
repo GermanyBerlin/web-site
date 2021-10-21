@@ -3,11 +3,11 @@ import MyPosts from './MyPosts/MyPosts';
 import Info from './Info/Info';
 
 
-const Content = () => {
+const Content = (props) => {
   return (
     <div className = 'content'>
       <Info />
-      <MyPosts />
+      <MyPosts posts={props.state.posts}/>
     </div>
   )
 }
