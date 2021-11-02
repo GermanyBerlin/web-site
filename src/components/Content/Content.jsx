@@ -5,9 +5,13 @@ import Info from './Info/Info';
 
 const Content = (props) => {
   return (
-    <div className = 'content'>
+    <div className={s.content}>
       <Info />
-      <MyPosts posts={props.state.posts}/>
+      <MyPosts
+        posts={props.contentPage.posts}
+        newPosts={props.contentPage.newPosts} 
+        dispatch={props.dispatch}
+      />
     </div>
   )
 }

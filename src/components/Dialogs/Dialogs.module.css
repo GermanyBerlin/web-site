@@ -32,7 +32,7 @@
 
 .message{
   padding: 5px;
-  display: flex;
+  /* display: flex; */
   border: 1px solid gray;
   border-radius: 5px;
   margin: 2px;

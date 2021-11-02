@@ -13,18 +13,21 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const App = (props) => {
   return (
-      <div className='wrapper'>
-        <Header />
-        <Navbar />
-        <div className='wrapper-content'>
-          <Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage} />} />
-          <Route path="/content" render={() => <Content state={props.state.contentPage}/>} />
-          <Route path="/news" render={() => <News />} />
-          <Route path="/music" render={() => <Music />} />
-          <Route path="/settings" render={() => <Settings />} />
-        </div>
-        <Footer />
+    <div className='wrapper'>
+      <Header />
+      <Navbar />
+      <div className='wrapper-content'>
+        <Route path="/dialogs" render={() => <Dialogs
+          store={props.store}/>} />
+        <Route path="/content" render={() => <Content
+          contentPage={props.state.contentPage}
+          dispatch={props.dispatch} />} />
+        <Route path="/news" render={() => <News />} />
+        <Route path="/music" render={() => <Music />} />
+        <Route path="/settings" render={() => <Settings />} />
       </div>
+      <Footer />
+    </div>
   );
 }
 
